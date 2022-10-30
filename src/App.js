@@ -1,8 +1,9 @@
+import { Login } from "./paginas/Login";
+import './style.scss'
+
 function App() {
   return (
-    <div>
-      Hello world!
-    </div>
+    <Login/>
   );
 }
 
