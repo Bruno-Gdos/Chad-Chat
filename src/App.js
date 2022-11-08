@@ -1,4 +1,4 @@
-import Register from "./paginas/Register";
+import Register from "./paginas/Registrar";
 import './style.scss'
 
 function App() {
