@@ -1,13 +1,16 @@
-import React from 'react'
-import Add from "../img/addAvatar.png"
+import React, { useState } from "react";
+import Add from "../img/addAvatar.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
-import { useState } from 'react';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc } from "firebase/firestore";
+import { useNavigate, Link } from "react-router-dom";
 
 const Registrar = () => {
   const [err, setErr] = useState(false)
+  const navigate = useNavigate();
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -37,7 +40,9 @@ const Registrar = () => {
               displayName,
               email,
               photoURL: downloadURL
-            })
+            });
+            await setDoc(doc(db, "userChats", res.user.uid), {});
+            navigate("/");
           });
         }
       );
@@ -65,7 +70,7 @@ const Registrar = () => {
                 <button>Registrar</button>
                 {err && <span>Algo deu errado</span>}
             </form>
-            <p>Já tem uma conta? Fazer Login</p>
+            <p>Já tem uma conta? <Link to="/Login"> Fazer Login </Link></p>
         </div>
     </div>
   )
