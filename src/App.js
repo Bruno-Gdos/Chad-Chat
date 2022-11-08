@@ -1,9 +1,9 @@
-import { Login } from "./paginas/Login";
+import Register from "./paginas/Register";
 import './style.scss'
 
 function App() {
   return (
-    <Login/>
+    <Register/>
   );
 }
 
