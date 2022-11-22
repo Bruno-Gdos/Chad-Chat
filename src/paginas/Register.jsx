@@ -50,7 +50,6 @@ const Registrar = () => {
     } catch (err) {
       setErr(true);
     }
-      
   }
 
   return (
@@ -68,7 +67,7 @@ const Registrar = () => {
                   <span>Adicione uma imagem de perfil</span>
                 </label>
                 <button>Registrar</button>
-                {err && <span>Algo deu errado</span>}
+                {err && <span>Algo deu errado.</span>}
             </form>
             <p>Já tem uma conta? <Link to="/Login"> Fazer Login </Link></p>
         </div>
