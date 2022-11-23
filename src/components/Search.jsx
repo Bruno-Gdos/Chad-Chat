@@ -35,8 +35,10 @@ const Search = () => {
     }
   };
 
-  const handleKey = (e) => {
-    e.code === "Enter" && handleSearch();
+  const handleKey2 = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
   };
 
   const handleSelect = async () => {
@@ -82,10 +84,13 @@ const Search = () => {
         <input
           type="text"
           placeholder="Encontre uma pessoa"
-          onKeyDown={handleKey}
           onChange={(e) => setUsername(e.target.value)}
+          onKeyDown={handleKey2}
           value={username}
         />
+
+        <button className="buscar" onClick={handleSearch}>Buscar</button>
+
       </div>
       {err && <span>Pessoa não encontrada!</span>}
       {user && (
