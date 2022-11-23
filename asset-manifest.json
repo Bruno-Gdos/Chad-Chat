@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Chad-Chat/static/css/main.89bc76a2.css",
-    "main.js": "/Chad-Chat/static/js/main.de319989.js",
+    "main.js": "/Chad-Chat/static/js/main.aafbbdea.js",
     "index.html": "/Chad-Chat/index.html",
     "main.89bc76a2.css.map": "/Chad-Chat/static/css/main.89bc76a2.css.map",
-    "main.de319989.js.map": "/Chad-Chat/static/js/main.de319989.js.map"
+    "main.aafbbdea.js.map": "/Chad-Chat/static/js/main.aafbbdea.js.map"
   },
   "entrypoints": [
     "static/css/main.89bc76a2.css",
-    "static/js/main.de319989.js"
+    "static/js/main.aafbbdea.js"
   ]
 }
